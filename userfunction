@@ -1,0 +1,73 @@
+//Creating User define Class
+import java.util.Scanner;
+class user function 
+{
+	public static void greet()
+	{
+		System.out.print("\n***Bye ! Thanks for Using...***\n");
+	}
+	public static void menu()
+	{
+		System.out.print("\n\n**********Welcome*********\n");
+		System.out.print("Menu:-\n");
+		System.out.print("\t Press 1 For Addition\n");
+		System.out.print("\t Press 2 For Subtraction\n");
+		System.out.print("\t Press 3 For Multiplication\n");
+		System.out.print("\t Press 4 For Division\n");
+		System.out.print("\t Press 5 For Modulus Division\n");
+		System.out.print("\t Press E For Exit\n");
+	}
+	public static void addition(int x,int y)
+	{
+		System.out.print("Sum="+(x+y));
+	}
+	public static void sub(int x,int y)
+	{
+		System.out.print("Subtration="+(x-y));
+	}
+	public static void mul(int x,int y)
+	{
+		System.out.print("Multiplication="+(x*y));
+	}
+	public static void div(int x,int y)
+	{
+		System.out.print("Division="+(x/y));
+	}
+	public static void mod(int x,int y)
+	{
+		System.out.print("Modulus Division="+(x%y));
+	}
+}
+class menu
+{
+	public static void main(String[] args) 
+	{
+			Scanner sc=new Scanner(System.in);	
+			itxperts it=new itxperts();
+			while(true)
+			{
+				it.menu(); //Displaying Menu 
+				System.out.print("Enter you Choice :");
+				char in=sc.next().charAt(0);
+				switch(in)
+				{
+					case '1':
+						it.addition(10,20);break;
+					case '2':
+						it.sub(20,10);break;
+					case '3':
+						it.mul(10,5);break;
+					case '4':
+						it.div(5,2);break;
+					case '5':
+						it.mod(5,2);break;
+					case 'e':
+					case 'E':
+						it.greet();
+						System.exit(0);
+					default:
+						System.out.print("Invalid Choice");
+				}
+			}		
+	}
+}
